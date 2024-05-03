@@ -129,6 +129,13 @@ body
   max-width: 500px;
   margin: auto;
 }
+
+.tab-center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
@@ -177,10 +184,10 @@ body
   <section id="summary">
     <div class="card-bg">
       <div class="row g-0">
-        <div class="col-md-4 text-center">
+        <!-- <div class="col-md-4 text-center">
           <img src="boy.png" width="300" heigh="300" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
+        </div> -->
+        <div class="col">
           <div class="card-body">
             <h6>Hi,</h6>
             <h6>I have successfully completed my undergraduate degree, earning a Bachelor of Engineering (B.E.) in Computer Science and Engineering (CSE)</h6>
@@ -200,7 +207,7 @@ body
     <div class="card-bg p-5">
       <div class="row">
         <div class="col-sm">
-          <div class="card">
+          <div class="card m-3">
             <h5 class="card-title-bg text-center p-3">CORE SKILLS</h5>
             <div class="card-body">
               <ul>
@@ -221,7 +228,7 @@ body
           </div>
         </div>
         <div class="col-sm">
-          <div class="card">
+          <div class="card m-3">
             <h5 class="card-title-bg text-center p-3">TECHNICAL SKILLS</h5>
             <div class="card-body">
               <!-- First Read More button -->
@@ -261,7 +268,7 @@ body
           </div>
         </div>
         <div class="col-sm">
-          <div class="card">
+          <div class="card m-3">
             <h5 class="card-title-bg text-center p-3">TOOLS EXPERIENCED WITH</h5>
             <div class="card-body">
               <ul>
@@ -288,7 +295,7 @@ body
     <div class="row">
       <div class="col-auto m-5"></div>
       <div class="col-auto m-5"></div>
-      <div class="col-auto m-5">
+      <div class="col-auto m-5 tab-center">
       <button type="button" class="btn card-title-bg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Mugavari Webapp</button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -324,17 +331,18 @@ body
         </div>
       </div>
       <div class="col-auto m-5">
-        <button type="button" class="btn card-title-bg" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Ticket Booking App</button>
+        <button type="button" class="btn card-title-bg" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Hope3 Application</button>
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Ticket Booking App</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Hope3 Application</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-              <p>EveBook is a cutting-edge event ticket booking web application designed to facilitate the seamless purchase of tickets for a variety of events, ranging from music concerts to cultural shows. Powered by Java/Kotlin backend language and Micronaut framework, EveBook leverages AWS services like Lambda, S3, API Gateway, and DynamoDB for development and deployment. The platform efficiently manages booking summaries for each event, offering users a hassle-free experience. On the frontend, EveBook employs HTML, CSS, JavaScript, and React.js to create an intuitive user interface.
-              </p>  
+              <p>Introducing the Hope3 Application an innovative application dedicated to empowering students transitioning from their 12th standard. Developed by a skilled backend team proficient in Kotlin, Micronaut, and AWS technologies, this platform serves as a vital conduit between students and the Hope3 foundation.<br><br>
+                Hope3 utilizes Java/Kotlin for backend operations, coupled with the Micronaut framework and AWS services including Lambda, S3, API Gateway, and DynamoDB. Through this robust architecture, Hope3 maintains a comprehensive database of student and donor information, ensuring transparency and efficiency in financial aid distribution.<br><br>
+                On the frontend, Hope3 prioritizes user experience, employing HTML, CSS, and JavaScript to craft an intuitive interface for students and donors. Join us in our mission to support students and pave the way for brighter futures with the Hope3 Student Support Platform.</p>  
               </div>
             </div>
           </div>
