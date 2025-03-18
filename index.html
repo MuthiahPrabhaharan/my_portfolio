@@ -8,8 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
     html,
@@ -18,6 +16,11 @@ body {
     padding: 0;
     font-family: 'roboto', sans-serif;
     overflow-x: clip;
+}
+
+.navbar-toggler:focus {
+    border: 1px solid #029b60;
+    
 }
 
 .logo {
@@ -31,6 +34,15 @@ body {
 {
   padding-left: 50px;
 
+}
+
+button.btn:hover {
+    color: #75c3a5  !important;
+}
+
+.btn-check:focus+.btn, .btn:focus
+{
+  box-shadow: none !important;
 }
 
 
@@ -151,7 +163,7 @@ body
     <div class="collapse navbar-collapse content-center justify-content-center" id="menu">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link nav-links" href="#intro">Intro</a>
+          <a class="nav-link nav-links"  href="#intro">Intro</a>
         </li>
         <li class="nav-item">
           <a class="nav-link nav-links" href="#summary">Summary</a>
@@ -198,9 +210,9 @@ body
     </div>
   </section>
 
-  <section id="exploration">
+  <section id="exploration"></section>
     <div class="container">
-      <div class="row p-5 m-5">
+      <div class="row p-5">
         <h1 class="text-center text-color">EXPLORATION</h1>
       </div>
     </div> 
@@ -292,18 +304,17 @@ body
         </div>
       </div>
     </div>  
-  </section>
+  
   <section id="portfolio">
     <div class="container">
-      <div class="row p-5 m-5">
+      <div class="row p-5">
         <h1 class="text-center text-color">PORTFOLIO</h1>
       </div>
     </div> 
-    <div class="row">
-      <div class="col-auto m-5"></div>
-      <div class="col-auto m-5"></div>
-      <div class="col-auto m-5 tab-center">
-      <button type="button" class="btn card-title-bg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">VarphiKBI Webapp</button>
+    <div class="card-bg p-5">
+      <div class="row tab-center">
+      <div class="col-auto m-5 ">
+      <button type="button" class="btn card-title-bg p-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">VarphiKBI Webapp</button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -324,7 +335,7 @@ body
       </div>
       </div>
       <div class="col-auto m-5">
-        <button type="button" class="btn card-title-bg" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Goddard Webapp</button>
+        <button type="button" class="btn card-title-bg p-4" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Goddard Webapp</button>
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -341,7 +352,7 @@ body
         </div>
       </div>
       <div class="col-auto m-5">
-        <button type="button" class="btn card-title-bg" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">InternalMF Webapp</button>
+        <button type="button" class="btn card-title-bg p-4" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">InternalMF Webapp</button>
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -359,11 +370,12 @@ body
         </div>
       </div>
     </div>
+    </div>
   </section>    
 
   <section id="contactme">
     <div class="container">
-      <div class="row p-5 m-5">
+      <div class="row p-5">
         <h1 class="text-center text-color">CONTACT ME</h1>
       </div>
     </div> 
@@ -431,6 +443,20 @@ body
       }
     }
   </script>
+  
+  <script>
+  // This function will close the menu when a link is clicked
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function (item) {
+    item.addEventListener('click', function () {
+      var collapseElement = document.getElementById('menu');
+      var collapse = new bootstrap.Collapse(collapseElement, {
+        toggle: false
+      });
+      collapse.hide(); // Hide the menu
+    });
+  });
+</script>
+
 
 </body>
 
